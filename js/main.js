@@ -64,12 +64,13 @@
 
 	var carousel = function() {
 		$('.carousel-testimony').owlCarousel({
-			center: true,
+			center: false,
 			loop: false,
 			items:1,
 			margin: 30,
 			stagePadding: 0,
 			nav: false,
+			autoplay: true,
 			navText: ['<span class="ion-ios-arrow-back">', '<span class="ion-ios-arrow-forward">'],
 			responsive:{
 				0:{
@@ -85,12 +86,13 @@
 		});
 
 		$('.carousel-case').owlCarousel({
-			center: true,
+			center: false,
 			loop: true,
 			items:1,
 			margin: 30,
 			stagePadding: 0,
 			nav: false,
+			autoplay: true,
 			navText: ['<span class="ion-ios-arrow-back">', '<span class="ion-ios-arrow-forward">'],
 			responsive:{
 				0:{

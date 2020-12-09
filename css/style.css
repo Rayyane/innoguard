@@ -3428,7 +3428,73 @@ input[type="button"].btn-block {
   padding-left: 0;
   margin-bottom: 0;
   list-style: none; }
+/*******/
+.nav .drop-down ul {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: calc(100% - 30px);
+  z-index: 99;
+  opacity: 0;
+  visibility: hidden;
+  padding: 10px 0;
+  background: #fff;
+  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+  transition: ease all 0.3s;
+}
 
+.nav .drop-down:hover > ul {
+  opacity: 1;
+  top: 100%;
+  visibility: visible;
+}
+
+.nav .drop-down li {
+  min-width: 180px;
+  position: relative;
+}
+
+.nav .drop-down ul a {
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: none;
+  color: #065e77;
+}
+
+.nav .drop-down ul a:hover,
+.nav .drop-down ul .active > a,
+.nav .drop-down ul li:hover > a {
+  color: #1bb1dc;
+}
+
+.nav .drop-down > a:after {
+  content: "\f107";
+  font-family: FontAwesome;
+  padding-left: 10px;
+}
+
+.nav .drop-down .drop-down ul {
+  top: 0;
+  left: calc(100% - 30px);
+}
+
+.nav .drop-down .drop-down:hover > ul {
+  opacity: 1;
+  top: 0;
+  left: 100%;
+}
+
+.nav .drop-down .drop-down > a {
+  padding-right: 35px;
+}
+
+.nav .drop-down .drop-down > a:after {
+  content: "\f105";
+  position: absolute;
+  right: 15px;
+}
+/*******/
 .nav-link {
   display: block;
   padding: 0.5rem 1rem; }
@@ -9586,7 +9652,7 @@ textarea.form-control {
   .block-2 .front {
     -webkit-transform: rotateY(0deg);
     -ms-transform: rotateY(0deg);
-    background: lightgreen;
+    background-color: lightgreen;
     z-index: 2;
     background-size: cover;
     background-position: center center;
@@ -9599,7 +9665,7 @@ textarea.form-control {
       bottom: 0;
       left: 0;
       opacity: .7;
-      /*background: rgba(255, 255, 255, 0);
+      background: rgba(255, 255, 255, 0);
       background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.15) 38%, rgba(0, 0, 0, 0.4) 100%);
       background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(38%, rgba(255, 255, 255, 0.15)), color-stop(100%, rgba(0, 0, 0, 0.4)));
       background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.15) 38%, rgba(0, 0, 0, 0.4) 100%);
@@ -9607,7 +9673,7 @@ textarea.form-control {
       background: -ms-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.15) 38%, rgba(0, 0, 0, 0.4) 100%);
       background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(38%, rgba(255, 255, 255, 0.15)), to(rgba(0, 0, 0, 0.4)));
       background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.15) 38%, rgba(0, 0, 0, 0.4) 100%);
-      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000', GradientType=0 );*/ }
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000', GradientType=0 ); }
     .block-2 .front .box {
       position: absolute;
       bottom: 0;
